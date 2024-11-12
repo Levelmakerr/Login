@@ -1,11 +1,10 @@
-{% autoescape off %}
+{% comment %} {% autoescape off %} {% endcomment %}
+Welcome to MyApp
 
-Welcome to MyApp Login
 
 Hello {{ name }}
+    Click the link below to activate your account:
+    "http://{{ domain }}/activate/{{ uid }}/{{ token }}/"
 
-Please confirm your email by clicking on the following link.
 
-Confirmation Link: http://{{ domain }}{% url "activate" uid64=uid token=token %}
-
-{% endautoescape %}
+{% comment %} {% endautoescape %} {% endcomment %}
